@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mage Details</title>
+
+    <link rel="stylesheet" th:href="@{../resources/css/reset-css.css}">
+    <link rel="stylesheet" th:href="@{../resources/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{../resources/css/style.css}">
+
+</head>
+<body>
+<header>
+    <nav class="navbar bg-dark navbar-expand-lg navbar-background bg-dark ">
+        <a class="navbar-brand text-white h4" href="/">Heroes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+            <ul class="navbar-nav row">
+                <li class="nav-item col-md-4">
+                    <a class="nav-link text-white active h5" href="/home">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <h1>Mage</h1>
+        <hr class="my-3"/>
+        <p class="h4">Mages demolish their foes with arcane incantations.
+            Although they wield powerful offensive spells, mages are fragile and lightly armored,
+            making them particularly vulnerable to close-range attacks.
+            Wise mages make careful use of their spells to keep their foes at a distance or hold them in place.
+        </p>
+        <a class="btn btn-info mb-2" th:href="@{/create-hero}">Try it now!</a>
+        <hr class="my-3"/>
+    </div>
+</main>
+<footer class="footer bg-dark  py-2">
+    <div class="container-fluid text-center">
+        <div class="footer-background h5 text-white">
+            &#169; CopyRight Victorious Arena. All rights reserved.
+        </div>
+    </div>
+</footer>
+</body>
+</html>

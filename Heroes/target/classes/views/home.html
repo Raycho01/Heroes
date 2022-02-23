@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Heroes</title>
+
+    <link rel="stylesheet" th:href="@{../resources/css/reset-css.css}">
+    <link rel="stylesheet" th:href="@{../resources/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{../resources/css/style.css}">
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a href="/home" class="navbar-brand text-white h4">Heroes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+            <ul class="navbar-nav row w-25">
+                <li class="nav-item col-md-4">
+                    <form>
+                        <a class="nav-link text-white  active h5" href="/home">Home</a>
+                    </form>
+                </li>
+                <li class="nav-item col-md-4">
+                    <a class="nav-link text-white active h5" th:href="@{/myHeroes}">My Heroes</a>
+                </li>
+<!--                <li class="nav-item col-md-4">-->
+<!--                    <form>-->
+<!--                        <a class="nav-link text-white  active h5" th:href="@{/delete-hero}">Delete Hero</a>-->
+<!--                    </form>-->
+<!--                </li>-->
+                <li class="nav-item col-md-4">
+                    <form>
+                        <a class="nav-link text-white active h5" href="/index">Logout</a>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="text-center mb-3">
+        <h4 class="text-white mt-2" th:text="'Welcome to the arena, ' + ${username}"></h4>
+    </div>
+    <hr class="my-3"/>
+    <div class="container">
+        <div class="row mb-4 d-flex justify-content-around">
+            <div class="col-md-3 d-flex flex-column text-center mb-3">
+                <img name="warrior.jpg" src="/resources/img/warrior.jpg" class="img-thumb" width="300" height="300"/>
+                <h5 class="text-white text-center">Warrior</h5>
+                <a class="btn btn-info mb-2" th:href="@{/warriorDetails}">Details</a>
+<!--                <a class="btn btn-danger">Delete</a>-->
+            </div>
+            <div class="col-md-3 d-flex flex-column text-center mb-3">
+                <img name="heroImage.jpg" src="/resources/img/archer.jpg" class="img-thumb" width="300" height="300"/>
+                <h5 class="text-white text-center">Archer</h5>
+                <a class="btn btn-info mb-2" th:href="@{/archerDetails}">Details</a>
+<!--                <a class="btn btn-danger">Delete</a>-->
+            </div>
+            <div class="col-md-3 d-flex flex-column text-center mb-3">
+                <img name="heroImage.jpg" src="/resources/img/mage.jpg" class="img-thumb" width="300" height="300"/>
+                <h5 class="text-white text-center">Mage</h5>
+                <a class="btn btn-info mb-2" th:href="@{/mageDetails}">Details</a>
+<!--                <a class="btn btn-danger">Delete</a>-->
+            </div>
+        </div>
+<!--        <div class="row mb-4 d-flex justify-content-around">-->
+<!--            <div class="col-md-3 d-flex flex-column text-center mb-3">-->
+<!--                <img name="heroImage.jpg" class="img-thumb" width="300" height="300"/>-->
+<!--                <h5 class="text-white text-center">Warrior</h5>-->
+<!--                <a class="btn btn-info mb-2">Details</a>-->
+<!--                <a class="btn btn-danger">Delete</a>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</main>
+<span style="visibility: hidden">...</span>
+<footer class="footer bg-dark  py-2">
+    <div class="container-fluid text-center">
+        <div class="footer-background h5 text-white">
+            &#169; CopyRight Victorious Arena. All rights reserved.
+        </div>
+    </div>
+</footer>
+</body>
+</html>
